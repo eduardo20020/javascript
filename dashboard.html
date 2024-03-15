@@ -11,28 +11,37 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Ejemplos de Javascript</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse mx-5" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Pricing</a>
-            </div>
-            <a class="nav-link mx-5" href="index.html">Cerrar Sesion</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Ejemplos de Javascript</a>
+      <button class="navbar-toggler" type="button" id="toggleMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mx-5" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Desplegable
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Opción 1</a></li>
+              <li><a class="dropdown-item" href="#">Opción 2</a></li>
+              <li><a class="dropdown-item" href="#">Opción 3</a></li>
+            </ul>
           </div>
+          <a id="colores" class="nav-link" href="#">Cambia colores</a>
         </div>
-    </nav>
+        <a class="nav-link mx-5" href="index.html">Cerrar Sesion</a>
+      </div>
+    </div>
+  </nav>
 
     <div class="container my-3"><h3>Inicio de sesion correcto!</h3></div>
     <div class="container justify-content-center align-items-center my-3 text-center">
 
       <hr>
-      <h5>ejemplo de fetch con una API del clima</h5>
+      <h5>--Ejemplo de fetch con una API del clima--</h5>
         <div id="weather-info">
 
         </div>
@@ -40,7 +49,7 @@
 
 
       <div class="container text-center">
-        <h5>ejemplo de fetch consultar una base de datos</h5>
+        <h5>--Ejemplo de fetch consultar una base de datos--</h5>
         <table id="tablaUsuarios" class="table">
             <thead class="table-dark">
                 <tr>

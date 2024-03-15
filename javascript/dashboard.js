@@ -40,3 +40,42 @@ fetch(apiUrl)
      });
  })
  .catch(error => console.error('Error:', error)); // Manejamos errores si los hay
+ /////////////////////////////////////////////////////////////////
+
+
+
+ //desplegable
+ document.addEventListener("DOMContentLoaded", function() {
+    var toggleMenu = document.getElementById("toggleMenu");
+    var dropdownMenu = document.getElementById("navbarDropdown");
+
+    toggleMenu.addEventListener("click", function() {
+      dropdownMenu.classList.toggle("show");
+    });
+  });
+  ///////////////////////////////////////////////
+
+
+  ///cambia de color
+    // Función para generar un color aleatorio en formato hexadecimal
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Obtener el enlace "Cambia colores"
+    var changeColorLink = document.getElementById("colores");
+
+    // Agregar un event listener para el clic en el enlace "Cambia colores"
+    changeColorLink.addEventListener("click", function(event) {
+      // Generar un color aleatorio
+      var randomColor = getRandomColor();
+      // Cambiar el color de fondo del body al color aleatorio
+      document.body.style.backgroundColor = randomColor;
+      // Evitar el comportamiento predeterminado del enlace
+      event.preventDefault();
+    });
