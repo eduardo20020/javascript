@@ -21,3 +21,22 @@ fetch(apiUrl)
         console.error('Hubo un error al obtener los datos del clima:', error);
     });
 //////////////////////////////////////////////////////////////////
+
+ // Utilizamos fetch para obtener los datos del servidor
+ fetch('../php/datos.php')
+ .then(response => response.json()) // Convertimos la respuesta a JSON
+ .then(data => {
+     // Manipulamos los datos recibidos
+     let usuariosBody = document.getElementById('usuariosBody');
+     data.forEach(usuario => {
+         // Creamos una fila para cada usuario
+         let row = usuariosBody.insertRow();
+         // Insertamos celdas para el usuario y la contraseña
+         let cellUsuario = row.insertCell(0);
+         let cellPassword = row.insertCell(1);
+         // Insertamos los datos del usuario en las celdas
+         cellUsuario.textContent = usuario.usuario;
+         cellPassword.textContent = usuario.password;
+     });
+ })
+ .catch(error => console.error('Error:', error)); // Manejamos errores si los hay
